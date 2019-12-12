@@ -1,0 +1,23 @@
+buildscript {
+    dependencies {
+        classpath 'org.glassfish.jaxb:jaxb-runtime:2.3.1'
+    }
+}
+
+plugins {
+    id 'java'
+    id 'nu.studer.jooq' version '3.0.2'
+}
+
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'com.sun.xml.bind', name: 'jaxb-impl', version: '2.2.1'
+}
