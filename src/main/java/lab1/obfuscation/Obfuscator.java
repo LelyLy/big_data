@@ -1,27 +1,25 @@
 package lab1.obfuscation;
 
-public class Obfuscator {
+class Obfuscator {
 
-    private static String source="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    private static String target="Q5A8ZWS0XEDC6RFVT9GBY4HNU3J2MI1KO7LP";
-    public static String obfuscate(String s) {
-        char[] result= new char[10];
-        for (int i=0;i<s.length();i++) {
-            char c=s.charAt(i);
-            int index=source.indexOf(c);
-            result[i]=target.charAt(index);
-        }
-        return new String(result);
+    private static String source="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    private static String target="mWOyuQHI9FTgipC4noG2XcfJ0EhdeNlbx7VMAwB6r8UtPDSskzqvYZj3RaL5K1";
+
+    static String obfuscate(String s) {
+        return getString(s, source, target);
     }
 
-    public static String unobfuscate(String s) {
-        char[] result= new char[10];
-        for (int i=0;i<s.length();i++) {
-            char c=s.charAt(i);
-            int index=target.indexOf(c);
-            result[i]=source.charAt(index);
-        }
-        return new String(result);
+    static String unobfuscate(String s) {
+        return getString(s, target, source);
     }
 
+    private static String getString(String s, String target, String source) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            int index = source.indexOf(c);
+            stringBuilder.append(target.charAt(index));
+        }
+        return stringBuilder.toString();
+    }
 }

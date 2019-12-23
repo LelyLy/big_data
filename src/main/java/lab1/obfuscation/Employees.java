@@ -7,16 +7,12 @@ import java.util.List;
 
 @XmlRootElement(name = "employees")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Employees
+class Employees
 {
     @XmlElement(name = "employee")
-    public List<Employee> employees = null;
+    private List<Employee> employees = null;
 
-    public List<Employee> getEmployees() {
+    List<Employee> getEmployees() {
         return employees;
-    }
-
-    public void setEmployees(List<Employee> employees) {
-        this.employees = employees;
     }
 }

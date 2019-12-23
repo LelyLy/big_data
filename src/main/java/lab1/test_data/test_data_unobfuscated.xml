@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employees>
+    <employee id="1227">
+        <firstName>Alyona</firstName>
+        <lastName>Frolova</lastName>
+        <location>Russia</location>
+    </employee>
+    <employee id="365">
+        <firstName>Lely</firstName>
+        <lastName>Ly</lastName>
+        <location>USA</location>
+    </employee>
+    <employee id="1019">
+        <firstName>Adel</firstName>
+        <lastName>Nemi</lastName>
+        <location>USA</location>
+    </employee>
+</employees>

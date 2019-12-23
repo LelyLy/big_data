@@ -4,46 +4,46 @@ import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name = "employee")
 @XmlAccessorType(XmlAccessType.PROPERTY)
-public class Employee
+class Employee
 {
-    private Integer id;
+    private String id;
     private String firstName;
     private String lastName;
     private String location;
 
-    public int getId() {
+    String getId() {
         return id;
     }
 
     @XmlAttribute
-    public void setId(int id) {
+    void setId(String id) {
         this.id = id;
     }
 
-    public String getFirstName() {
+    String getFirstName() {
         return firstName;
     }
 
     @XmlElement
-    public void setFirstName(String firstName) {
+    void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
+    String getLastName() {
         return lastName;
     }
 
     @XmlElement
-    public void setLastName(String lastName) {
+    void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public String getLocation() {
+    String getLocation() {
         return location;
     }
 
     @XmlElement
-    public void setLocation(String location) {
+    void setLocation(String location) {
         this.location = location;
     }
 }
